@@ -19,20 +19,110 @@
 }
 
 .ACSC00__bg__desc h2 {
-  font-size: 65px;
+  font-size: 60px;
   margin-bottom: 20px;
   text-shadow: 5px 4px 5px #0b0b0b;
 }
 .ACSC00__bg__desc p {
-  font-size: 35px;
+  font-size: 45px;
   margin-bottom: 20px;
   text-shadow: 4px 4px 4px #0b0b0b;
   font-style: italic;
 }
+
 .ACSC00__bg__arrow svg {
   color: #fff;
   font-size: 110px;
   position: absolute;
   margin-left: 47%;
   margin-top: 45%;
+}
+
+@media (max-width: 1024px) {
+  .ACSC00__bg__arrow svg {
+    color: #fff;
+    font-size: 110px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 60%;
+  }
+
+  .ACSC00__bg__desc h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-shadow: 5px 4px 5px #0b0b0b;
+  }
+  .ACSC00__bg__desc p {
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px #0b0b0b;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 670px) {
+  .ACSC00__bg__arrow svg {
+    color: #fff;
+    font-size: 110px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 90%;
+  }
+
+  .ACSC00__bg__desc h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 5px 4px 5px #0b0b0b;
+  }
+  .ACSC00__bg__desc p {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px #0b0b0b;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 450px) {
+  .ACSC00__bg__arrow svg {
+    color: #fff;
+    font-size: 110px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 140%;
+  }
+
+  .ACSC00__bg__desc h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 5px 4px 5px #0b0b0b;
+  }
+  .ACSC00__bg__desc p {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px #0b0b0b;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 320px) {
+  .ACSC00__bg__arrow svg {
+    color: #fff;
+    font-size: 110px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 170%;
+  }
+
+  .ACSC00__bg__desc h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 5px 4px 5px #0b0b0b;
+  }
+
+  .ACSC00__bg__desc p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px #0b0b0b;
+    font-style: italic;
+  }
 }

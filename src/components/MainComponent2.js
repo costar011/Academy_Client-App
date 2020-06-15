@@ -3,8 +3,13 @@ import React from "react";
 class MainComponent2 extends React.Component {
   render() {
     return (
-      <div className="MainComopnent1">
-        <div>MainComponent2</div>
+      <div className="MainComponent2">
+        <img
+          src="http://leafsoftware.cafe24.com/test/bbbb.jpg"
+          alt="picture"
+          width="100%"
+          height="100%"
+        />
       </div>
     );
   }

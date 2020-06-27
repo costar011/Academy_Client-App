@@ -10,6 +10,7 @@ class ACSC01 extends React.Component {
 
     this.state = {
       dataList: [],
+      txtValue: "",
     };
   }
 
@@ -23,7 +24,7 @@ class ACSC01 extends React.Component {
     }, 2000);
   };
   render() {
-    const { dataList } = this.state;
+    const { dataList, txtValue } = this.state;
 
     const settings = {
       dots: true,
@@ -76,14 +77,29 @@ class ACSC01 extends React.Component {
 
         <div className="controller"></div>
         <div className="chatArea"></div>
-        <input type="text" />
+        <input
+          type="text"
+          id="txt"
+          name="txtValue"
+          value={txtValue}
+          onChange={this._valueChangeHandler}
+        />
         <input type="button" value="OK" onClick={this._inputHandler} />
       </div>
     );
   }
 
+  _valueChangeHandler = (event) => {
+    let nextState = {};
+
+    nextState[event.target.name] = event.target.value;
+    this.setState(nextState);
+  };
+
   _inputHandler = () => {
-    alert("CLick");
+    const txt = document.getElementById("txt");
+
+    console.log(txt.value);
   };
 }
 export default ACSC01;

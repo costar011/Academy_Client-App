@@ -1,0 +1,44 @@
+.slick__box {
+  width: 100%;
+  height: 200px;
+}
+
+.slick__box .slick__box__1 {
+  width: 100%;
+  height: 100%;
+  background-color: royalblue;
+}
+
+.slick__box .slick__box__2 {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+.slick__box .slick__box__3 {
+  width: 100%;
+  height: 100%;
+  background-color: darkcyan;
+}
+
+.slick__box .slick__box__4 {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.slick__box .slick__box__5 {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+.slick__box .slick__box__6 {
+  width: 100%;
+  height: 100%;
+  background-color: salmon;
+}
+
+.controller {
+  margin-top: 50px;
+}

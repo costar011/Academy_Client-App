@@ -1,44 +1,63 @@
 import React from "react";
 import Lnb from "../components/Lnb";
-
 class ACSC04 extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      txtValue: "",
+      txt1: "",
+      txt2: "",
+      txt3: "",
     };
   }
   render() {
-    const { txtvalue } = this.state;
+    const { txt1, txt2, txt3 } = this.state;
     return (
       <div>
-        <Lnb title="CONTACT" column="HOME > CONTACT" />
+        <Lnb title="Contect" column="HOME > Contect" link="/" />
 
         <input
           type="text"
-          id="tet"
-          name="txtvalue"
-          value={txtvalue}
-          onChange={this._BtnHandler}
-        ></input>
-        <input type="button" value="확인" onClick={this._OkHandler}></input>
+          id="txt"
+          name="txt1"
+          value={txt1}
+          onChange={this._txtHandler}
+        />
+
+        <input
+          type="text"
+          id="txt"
+          name="txt2"
+          value={txt2}
+          onChange={this._txtHandler}
+        />
+
+        <input
+          type="text"
+          id="txt"
+          name="txt3"
+          value={txt3}
+          onChange={this._txtHandler}
+        />
+
+        <input type="button" id="txt" value="OK" onClick={this._ClickHandler} />
       </div>
     );
   }
+  _txtHandler = (event) => {
+    let State = {};
 
-  _BtnHandler = (event) => {
-    let nstate = {};
-
-    nstate[event.target.name] = event.target.txtvalue;
-
-    this.setState(nstate);
+    State[event.target.name] = event.target.value;
+    this.setState(State);
   };
 
-  _OkHandler = () => {
-    const tet = document.getElementById("tet");
+  _ClickHandler = () => {
+    const { txt1, txt2, txt3 } = this.state;
 
-    console.log(tet.value);
+    console.log(txt1);
+    console.log(txt2);
+    console.log(txt3);
   };
 }
+
 export default ACSC04;

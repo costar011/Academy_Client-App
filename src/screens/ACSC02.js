@@ -1,5 +1,6 @@
 import React from "react";
 import Lnb from "../components/Lnb";
+import axios from "axios";
 
 class ACSC02 extends React.Component {
   constructor(props) {
@@ -13,6 +14,30 @@ class ACSC02 extends React.Component {
       filename: "-",
     };
   }
+
+  componentDidMount = async () => {
+    // await axios.get(
+    //   "http://http://localhost:5000/api/testREST",
+    //   {},
+    //   {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   }
+    // );
+
+    await axios.post(
+      "http://http://localhost:5000/api/dataTest",
+      {
+        params: "Test data",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  };
 
   render() {
     const { startDate, endDate, filename } = this.state;

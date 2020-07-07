@@ -17,7 +17,7 @@ class ACSC03 extends React.Component {
         </Fade>
 
         <Fade bottom>
-          <p>안녕하세요? 금학해법 수학학원 입니다.</p>
+          <p>Tset Fade</p>
         </Fade>
 
         <Flip top>
@@ -39,10 +39,6 @@ class ACSC03 extends React.Component {
         <Fade clear>
           <p>clear</p>
         </Fade>
-
-        <Zoom top>
-          <p>Zoom</p>
-        </Zoom>
       </div>
     );
   }

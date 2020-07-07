@@ -114,7 +114,7 @@ class ACSC02 extends React.Component {
     // 4.form태그에 파일을 넣는다.
     form.append("uploadFile", file);
 
-    // 5. axios를 통해서 server로 전송한다. (URL),{ 뭘 전송할건데? }, { 어떤 형식으로 전송할 건데? 객체야?클래스야? 어떤 유형의 데이터야? }
+    // 5. axios를 통해서 server로 전송한다. (URL), { 뭘 전송할건데? }, { 어떤 형식으로 전송할 건데? 객체야?클래스야? 어떤 유형의 데이터야? }
     await axios.post("http://localhost:5000/api/fileUpload", form, {
       headers: {
         "Content-Type": "multipart/form-data",

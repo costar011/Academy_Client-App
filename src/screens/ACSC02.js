@@ -26,10 +26,16 @@ class ACSC02 extends React.Component {
     //   }
     // );
 
+    const inputData = {
+      name: "정예림",
+      age: 18,
+      gender: "여성",
+    };
+
     await axios.post(
-      "http://http://localhost:5000/api/dataTest",
+      "http://localhost:5000/api/dataTest",
       {
-        params: "Test data",
+        params: inputData,
       },
       {
         headers: {
@@ -85,10 +91,36 @@ class ACSC02 extends React.Component {
           <label className="fileBox__lb" htmlFor="inputFile">
             파일업로드
           </label>
+
+          <button onClick={this._sendFileHandler}>백엔드로 파일 전송</button>
         </div>
       </div>
     );
   }
+
+  _sendFileHandler = async () => {
+    // 1. 현재 업로드 된 파일을 가져온다.
+    const { file } = this.state;
+
+    // 2. 파일이 없다면(null)이라면 함수를 중단시킨다.
+    if (file === null) {
+      alert("파일이 없습니다.");
+      return;
+    }
+
+    // 3. form태그를 만든다.
+    let form = new FormData();
+
+    // 4.form태그에 파일을 넣는다.
+    form.append("uploadFile", file);
+
+    // 5. axios를 통해서 server로 전송한다. (URL),{ 뭘 전송할건데? }, { 어떤 형식으로 전송할 건데? 객체야?클래스야? 어떤 유형의 데이터야? }
+    await axios.post("http://localhost:5000/api/fileUpload", form, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  };
 
   _fileChangeHandler = (event) => {
     const file = event.target.files[0];
